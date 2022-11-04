@@ -56,6 +56,12 @@ Main concepts:
 
 Feature | Focus 
 ------ | -----------
+Parse wealth management target plans | 
+Ingest relevant market and asset data | 
+Retrieve risk estimates for relevant markets, assets |
+Compute a set of allocation strategies | 
+Benchmark the allocation strategies |
+Compile and return the optimal allocation strategy |
 
 
 ## Planner 
