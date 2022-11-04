@@ -53,7 +53,7 @@ ErrorMessages = {
     },
 }
 
-def respond(status: Union[int, StatusCode], message) -> JSON:
+def response(status: Union[int, StatusCode], body) -> JSON:
     """
     Creates a reponse object from statuscode and message.
     """
@@ -62,9 +62,9 @@ def respond(status: Union[int, StatusCode], message) -> JSON:
         status = StatusCode[status]
     # Handle success case
     if status.value < 300:
-        body = message
+        body = body
     else:
-        body = compile_error(status, message)
+        body = compile_error(status, body)
     return {
         'status': status,
         'body': body
